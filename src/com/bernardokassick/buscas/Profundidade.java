@@ -9,7 +9,6 @@ public class Profundidade {
     private Pilha fronteira;
     private Cidade inicio;
     private Cidade objetivo;
-
     private boolean achou;
 
     public Profundidade(Cidade inicio, Cidade objetivo) {
@@ -27,11 +26,11 @@ public class Profundidade {
         System.out.println("Topo: " + topo.getNome());
 
         if (topo == objetivo) {
-            achou = true;
+            this.achou = true;
             System.out.println("Chegou até: " + topo.getNome());
         } else {
         for (Adjacente adj : topo.getAdjacentes()) {
-            if (!achou) {
+            if (!this.achou) {
                 System.out.println("Varificando se já visitado: " + adj.getCidade().getNome());
 
                 if (!adj.getCidade().isVisitado()) {

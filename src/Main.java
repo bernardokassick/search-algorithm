@@ -1,3 +1,4 @@
+import com.bernardokassick.buscas.Largura;
 import com.bernardokassick.buscas.Profundidade;
 import com.bernardokassick.estruturas.Pilha;
 import com.bernardokassick.grafocidades.Mapa;
@@ -21,7 +22,8 @@ public class Main {
 
         Mapa mapa = new Mapa();
         Profundidade profundidade = new Profundidade(mapa.getPortoUniao(), mapa.getCuritiba());
+        Largura largura = new Largura(mapa.getPortoUniao(), mapa.getIrati());
 
-        profundidade.buscar();
+        largura.buscar();
     }
 }

@@ -8,6 +8,8 @@ public class Pilha {
     private Cidade[] cidades;
     private int topo;
 
+
+
     public Pilha(int tamanho) {
         this.tamanho = tamanho;
         cidades = new Cidade[this.tamanho];
@@ -21,6 +23,8 @@ public class Pilha {
             System.out.println("A pilha já está cheia");
         }
     }
+
+
 
     public Cidade desempilhar() {
         if (!pilhaVazia()) {
