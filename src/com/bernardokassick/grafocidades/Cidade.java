@@ -11,11 +11,13 @@ import java.util.List;
 public class Cidade {
     private String nome;
     private boolean visitado;
+    private int distanciaObjetivo;
     private List<Adjacente> adjacentes;
 
-    public Cidade(String nome) {
+    public Cidade(String nome, int distanciaObjetivo) {
         this.nome = nome;
         this.visitado = false;
+        this.distanciaObjetivo = distanciaObjetivo;
         this.adjacentes = new ArrayList<Adjacente>();
     }
     
@@ -42,7 +44,12 @@ public class Cidade {
     public List<Adjacente> getAdjacentes() {
         return adjacentes;
     }
-    
-    
-    
+
+    public int getDistanciaObjetivo() {
+        return distanciaObjetivo;
+    }
+
+    public void setDistanciaObjetivo(int distanciaObjetivo) {
+        this.distanciaObjetivo = distanciaObjetivo;
+    }
 }

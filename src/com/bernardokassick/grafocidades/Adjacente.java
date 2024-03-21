@@ -7,9 +7,13 @@ package com.bernardokassick.grafocidades;
 
 public class Adjacente {
     private Cidade cidade;
+    private int distancia;
+    private int distAEstrela;
 
-    public Adjacente(Cidade cidade) {
+    public Adjacente(Cidade cidade, int distancia) {
         this.cidade = cidade;
+        this.distancia = distancia;
+        this.distAEstrela = this.distancia + this.cidade.getDistanciaObjetivo();
     }
 
     public Cidade getCidade() {
@@ -19,6 +23,17 @@ public class Adjacente {
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
     }
-    
-    
+
+    public int getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(int distancia) {
+        this.distancia = distancia;
+    }
+
+    public int getDistAEstrela() {
+        return distAEstrela;
+    }
+
 }
